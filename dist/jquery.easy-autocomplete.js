@@ -1,17 +1,8 @@
-/*
- * easy-autocomplete
- * jQuery plugin for autocompletion
- *
- * @author Łukasz Pawełczak (http://github.com/pawelczak)
- * @version 1.4.3
- * Copyright  License:
- */
+import jQuery from "jquery";
 
 /*
  * EasyAutocomplete - Configuration
  */
-import jQuery from 'jquery';
-
 var EasyAutocomplete = (function (scope) {
 
 	scope.Configuration = function Configuration(options) {
@@ -350,7 +341,7 @@ var EasyAutocomplete = (function (scope) {
 })(EasyAutocomplete || {});
 
 /*
- * EasyAutocomplete - Logger
+ * EasyAutocomplete - Logger 
  */
 var EasyAutocomplete = (function (scope) {
 
@@ -604,7 +595,7 @@ var EasyAutocomplete = (function (scope) {
  * EasyAutocomplete - Data proccess module
  *
  * Process list to display:
- * - sort
+ * - sort 
  * - decrease number to specific number
  * - show only matching list
  *
@@ -687,9 +678,9 @@ var EasyAutocomplete = (function (scope) {
 
 
 /*
- * EasyAutocomplete - Template
+ * EasyAutocomplete - Template 
  *
- *
+ * 
  *
  */
 var EasyAutocomplete = (function (scope) {
@@ -1045,7 +1036,7 @@ var EasyAutocomplete = (function (scope) {
 					/* List show animation */
 						.on('show.eac', function () {
   							if (!$field.is(':focus')) {return}
-
+						
 							switch(config.get('list').showAnimation.type) {
 
 								case 'slide':
