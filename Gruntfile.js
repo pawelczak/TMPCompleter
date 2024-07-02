@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
 		concat: {
 			'src-js': {
-				src: ['src/configuration.js', 'src/logger.js', 'src/constants.js', 'src/list.builder.js', 'src/data.processor.js', 'src/template.js', 'src/core.js'],
+				src: ['src/dependencies.js', 'src/configuration.js', 'src/logger.js', 'src/constants.js', 'src/list.builder.js', 'src/data.processor.js', 'src/template.js', 'src/core.js'],
 				dest: '<%= project.js.dest %>'
 			}
 		},
@@ -199,6 +199,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('test', ['qunit:unit', 'qunit:integration']);
 
 	grunt.registerTask('build', ['qunit:unit', 'concat', 'comments', 'uglify', 'sass:dev', 'sass:dist', 'usebanner', 'copy', 'clean']);
+
+	grunt.registerTask('build:js', ['concat', 'comments', 'copy', 'clean']);
 
 	grunt.registerTask('devel', ['build', 'qunit:integration']);
 
